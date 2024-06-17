@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Computer Science Student at Carnegie Mellon</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Tahoma ,Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #2f2f2f;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            margin-top: 50px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid #a61af7;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            color: #a61af7;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .tab:hover {
+            background-color: #a61af7;
+            color: #fff;
+        }
+        .tab.active {
+            background-color: #a61af7;
+            color: #fff;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            font-size: 3em;
+            color: #a61af7;
+            margin-bottom: 0.5em;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #ccc;
+            margin-top: 0;
+        }
+        .about-me, .resume, .projects {
+            margin-top: 20px;
+        }
+        .about-me p, .resume p, .projects p {
+            font-size: 1.0em;
+            line-height: 1.6;
+        }
+        .resume-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .resume-link a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #a61af7;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .projects ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .projects li {
+            margin-bottom: 10px;
+        }
+        .projects li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #2f2f2f;
+            color: #ccc;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #a61af7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Shreeya Gopakumar</h1>
+        </header>
+        
+        <!-- Tabs -->
+        <div class="tabs">
+            <div class="tab active" onclick="openTab(event, 'about-me-tab')">About Me</div>
+            <div class="tab" onclick="openTab(event, 'resume-tab')">Resume</div>
+            <div class="tab" onclick="openTab(event, 'projects-tab')">Projects</div>
+        </div>
+        
+        <!-- Sections -->
+        <div id="about-me-tab" class="section active">
+            <div class="about-me">
+                <p>Hi! I am an undergraduate student at Carnegie Mellon University currently pursuing my undergraduate degree in Computer Science. Driven by a profound interest in technology and innovation, I am passionate about exploring the diverse facets of computer science, including algorithms, software development, and artificial intelligence. My coursework at Carnegie Mellon has equipped me with a strong theoretical foundation and practical skills essential for tackling complex challenges in the field.
+
+                    <p>I am actively seeking opportunities to deepen my understanding and contribute to advancements in computer science. I am eager to explore research opportunities that align with my interests, particularly in areas such as machine learning or cybersecurity.
+
+            <p>I engage in coding projects and participate in hackathons to continually refine my skills and stay updated with industry trends. I am committed to leveraging my education and experiences to make meaningful contributions to the field of computer science and technology.
+                </p>
+            </div>
+        </div>
+        
+        <div id="resume-tab" class="section">
+            <div class="resume-link">
+                <a href="https://docs.google.com/document/d/146WXf63Bf5YFslucmukTPwG4go373U8L6v3wTbFivwU/edit?usp=sharing" target="_blank">Click here to view my resume</a>
+            </div>
+        </div>
+        
+        <div id="projects-tab" class="section">
+            <div class="projects">
+                <h2>House of Horrors</h2>
+                <ul>
+                    <p>An interactive escape room-inspired adventure in Python utilizing the CMU Graphics package and Python Imaging Library to create an immersive game environment. The Prim’s algorithm was used for maze generation and recursive backtracking was used for maze solving.</p>
+                 <p>Click <a href="https://github.com/ShreeyaGopakumar/House-of-Horrors">here</a> to view.</p>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/shreeya-g-7693a5277/">LinkedIn</a></p>
+    </footer>
+    
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("section");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+        
+        document.getElementById("about-me-tab").style.display = "block";
+        document.getElementsByClassName("tab")[0].classList.add("active");
+    </script>
+</body>
+</html>
