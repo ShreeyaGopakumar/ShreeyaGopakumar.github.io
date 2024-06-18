@@ -25,6 +25,12 @@
             margin-top: 50px;
 	    margin-bottom: 80px;
         }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
 	.tabs {
             display: flex;
             justify-content: space-between;
@@ -106,71 +112,8 @@
 		cursor:pointer;
 		transition: 0.3s;
 	}
-	#myImg:hover {opacity:0.7;}
-	.modal {
-		display:none;
-		position:fixed;
-		z-index:1;
-		padding-top: 100px;
-		left: 0;
-		top: 0;
-		width: 80%;
-		height:80%;
-		overflow:auto;
-		background-color: rgb(0,0,0);
-		background-color:rgba(0,0,0,0.9);
-	}
-	.modal-content{
-		margin: auto;
-		display:block;
-		width:80%;
-		max-width:700px;
-	}
-	#caption{
-		margin:auto;
-		display: block;
-  		width: 80%;
-  		max-width: 700px;
-  		text-align: center;
-  		color: #ccc;
-  		padding: 10px 0;
-  		height: 150px;
-	}
-
-
-	.modal-content, #caption {  
-  		animation-name: zoom;
-  		animation-duration: 0.6s;
-	}
-
-	@keyframes zoom {
-  		from {transform: scale(0.1)} 
-  		to {transform: scale(1)}
-	}
-
-	.close {
-  		position: absolute;
-  		top: 15px;
-  		right: 35px;
-  		color: #f1f1f1;
-  		font-size: 40px;
-  		font-weight: bold;
-  		transition: 0.3s;
-	}
-
-	.close:hover,
-	.close:focus {
-  		color: #bbb;
-  		text-decoration: none;
-  		cursor: pointer;
-	}
-
-	@media only screen and (max-width: 700px){
-  	.modal-content {
-    		width: 100%;
-  		}
-	}
-        footer {
+	
+    footer {
             text-align: center;
             padding: 10px 0;
             background-color: #2f2f2f;
@@ -207,36 +150,9 @@
 
             <p>I engage in coding projects and participate in hackathons to continually refine my skills and stay updated with industry trends. I am committed to leveraging my education and experiences to make meaningful contributions to the field of computer science and technology.
                 </p>
-	<img id="myImg" src="main/pfp.jpg" alt="Shreeya Gopakumar" width="300" height="200">
-
-
-	<div id="myModal" class="modal">
-  	<span class="close">&times;</span>
-  	<img class="modal-content" id="img01">
-  	<div id="caption"></div>
-	</div>
-
-	<script>
-	var modal = document.getElementById('myModal');
-
-	var img = document.getElementById('myImg');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-  		modal.style.display = "block";
-  		modalImg.src = this.src;
-  		captionText.innerHTML = this.alt;
-	}
-
-	var span = document.getElementsByClassName("close")[0];
-
-	span.onclick = function() { 
-  		modal.style.display = "none";
-	}
-	</script>
+	<img id="myImg" src="https://raw.githubusercontent.com/ShreeyaGopakumar/ShreeyaGopakumar.github.io/main/pfp.jpg" alt="Shreeya Gopakumar" class = "center" width=410 height=340 >
         </div>
         </div>
-        
         <div id="resume-tab" class="section">
             <div class="resume-link">
                 <a href="https://docs.google.com/document/d/146WXf63Bf5YFslucmukTPwG4go373U8L6v3wTbFivwU/edit?usp=sharing" target="_blank">Click here to view my resume</a>
