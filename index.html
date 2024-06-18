@@ -107,11 +107,20 @@
             text-decoration: none;
             font-weight: bold;
         }
-	#myImg{
+	img {
+	    float: left;
+	    margin: 15px;
 		border-radius: 5px;
 		cursor:pointer;
 		transition: 0.3s;
+		border: 1px solid #ddd; /* Gray border */
+        border-radius: 4px;  /* Rounded border */
+        padding: 5px; /* Some padding */
+  
 	}
+	img:hover {
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
 	
     footer {
             text-align: center;
@@ -144,14 +153,18 @@
         <!-- Sections -->
         <div id="about-me-tab" class="section active">
             <div class="about-me">
+                <a target="_blank" href="https://raw.githubusercontent.com/ShreeyaGopakumar/ShreeyaGopakumar.github.io/main/pfp.jpg">
+                <img src="https://raw.githubusercontent.com/ShreeyaGopakumar/ShreeyaGopakumar.github.io/main/pfp.jpg" alt="Shreeya Gopakumar" width = 255 height = 230>
+                </a>
+                </div>
+            
                 <p>Hi! I am an undergraduate student at Carnegie Mellon University currently pursuing my undergraduate degree in Computer Science. Driven by a profound interest in technology and innovation, I am passionate about exploring the diverse facets of computer science, including algorithms, software development, and artificial intelligence. My coursework at Carnegie Mellon has equipped me with a strong theoretical foundation and practical skills essential for tackling complex challenges in the field.
 
                     <p>I am actively seeking opportunities to deepen my understanding and contribute to advancements in computer science. I am eager to explore research opportunities that align with my interests, particularly in areas such as machine learning or cybersecurity.
 
             <p>I engage in coding projects and participate in hackathons to continually refine my skills and stay updated with industry trends. I am committed to leveraging my education and experiences to make meaningful contributions to the field of computer science and technology.
                 </p>
-	<img id="myImg" src="https://raw.githubusercontent.com/ShreeyaGopakumar/ShreeyaGopakumar.github.io/main/pfp.jpg" alt="Shreeya Gopakumar" class = "center" width=410 height=340 >
-        </div>
+	
         </div>
         <div id="resume-tab" class="section">
             <div class="resume-link">
